@@ -1,39 +1,20 @@
-// Wait for the DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {
-    
-    // Navbar Scroll Effect
+    // Essential navbar functionality
     const navbar = document.querySelector('.navbar');
     const navLinks = document.querySelectorAll('.nav-link');
-    let lastScrollTop = 0;
-
+    
+    // Simple scroll handler
     window.addEventListener('scroll', function() {
-        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        
-        // Add/remove scrolled class for navbar styling
-        if (scrollTop > 50) {
+        // Add/remove scrolled class for navbar
+        if (window.pageYOffset > 50) {
             navbar.classList.add('scrolled');
         } else {
             navbar.classList.remove('scrolled');
         }
-
-        // Update active nav link based on scroll position
-        let currentSection = '';
         
-        document.querySelectorAll('section').forEach(section => {
-            const sectionTop = section.offsetTop - 100;
-            if (scrollTop >= sectionTop) {
-                currentSection = section.getAttribute('id');
-            }
-        });
-
-        navLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href') === `#${currentSection}`) {
-                link.classList.add('active');
-            }
-        });
-
-        lastScrollTop = scrollTop;
+        // Show/hide scroll to top button
+        const scrollTopBtn = document.querySelector('.scroll-top');
+        scrollTopBtn.style.display = window.pageYOffset > 300 ? 'block' : 'none';
     });
 
     // Smooth Scrolling for Navigation Links
@@ -44,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             if (target) {
                 window.scrollTo({
-                    top: target.offsetTop - 80,
+                    top: target.offsetTop - 70,
                     behavior: 'smooth'
                 });
 
@@ -56,25 +37,18 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-
+    
     // Scroll to Top Button
     const scrollTopBtn = document.querySelector('.scroll-top');
-
-    window.addEventListener('scroll', function() {
-        if (window.pageYOffset > 300) {
-            scrollTopBtn.classList.add('show');
-        } else {
-            scrollTopBtn.classList.remove('show');
-        }
-    });
-
-    scrollTopBtn.addEventListener('click', function(e) {
-        e.preventDefault();
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
+    if (scrollTopBtn) {
+        scrollTopBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
         });
-    });
+    }
 
     // Image Loading Animation
     const images = document.querySelectorAll('img');
@@ -130,16 +104,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Carousel Auto Slide with Pause on Hover
     const carousel = document.querySelector('#heroCarousel');
     if (carousel) {
-        const carouselInstance = new bootstrap.Carousel(carousel, {
+        new bootstrap.Carousel(carousel, {
             interval: 5000
-        });
-
-        carousel.addEventListener('mouseenter', function() {
-            carouselInstance.pause();
-        });
-
-        carousel.addEventListener('mouseleave', function() {
-            carouselInstance.cycle();
         });
     }
 
