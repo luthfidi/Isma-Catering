@@ -14,10 +14,14 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Show/hide scroll to top button
         const scrollTopBtn = document.querySelector('.scroll-top');
-        scrollTopBtn.style.display = window.pageYOffset > 300 ? 'block' : 'none';
+        if (window.pageYOffset > 300) {
+            scrollTopBtn.classList.add('show');
+        } else {
+            scrollTopBtn.classList.remove('show');
+        }
     });
 
-    // Smooth Scrolling for Navigation Links
+    // Smooth scroll for navigation
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();

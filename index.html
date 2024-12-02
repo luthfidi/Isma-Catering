@@ -408,72 +408,85 @@
       </div>
     </section>
 
-    <!-- Kontak Section -->
-    <section id="kontak" class="py-5 bg-light">
-      <div class="container">
-        <h2 class="text-center mb-5 text-danger">Hubungi Kami</h2>
-        <div class="row g-4">
-          <div class="col-lg-6">
-            <div class="card h-100 shadow">
-              <div class="card-body p-5">
-                <div class="contact-info">
-                  <p class="mb-3 text-danger">
-                    <i class="bi bi-geo-alt-fill me-2 text-danger"></i> Jl. Nama
-                    Jalan No.123, Cileungsi, Bogor
-                  </p>
-                  <p class="mb-3 text-danger">
-                    <i class="bi bi-telephone-fill me-2 text-danger"></i>
-                    <a href="tel:+6212345678900" class="text-danger"
-                      >+62 123-4567-8900</a
-                    >
-                  </p>
-                  <p class="mb-4 text-danger">
-                    <i class="bi bi-whatsapp me-2 text-danger"></i>
-                    <a href="https://wa.me/6212345678900" class="text-danger"
-                      >+62 123-4567-8900</a
-                    >
-                  </p>
-                </div>
-                <div class="social-links">
-                  <a
-                    href="https://www.instagram.com/ismacatering"
-                    target="_blank"
-                    class="text-danger me-3 social-link"
-                  >
-                    <i class="bi bi-instagram fs-4 text-danger"></i>
-                    ismacatering
-                  </a>
-                  <a
-                    href="https://www.facebook.com/ismacatering"
-                    target="_blank"
-                    class="text-danger social-link"
-                  >
-                    <i class="bi bi-facebook fs-4 text-danger"></i> ismacatering
-                  </a>
-                </div>
+<!-- Kontak Section -->
+<section id="kontak" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-5">
+      <span>Hubungi Kami</span>
+    </h2>
+
+    <div class="row g-4">
+      <!-- Contact Info Card -->
+      <div class="col-lg-6">
+        <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow duration-300">
+          <div class="card-body p-4 p-lg-5">
+            <div class="contact-info">
+              <!-- Contact Details -->
+              <div class="mb-4">
+                <h5 class="mb-3">Informasi Kontak</h5>
+                <ul class="list-unstyled">
+                  <li class="d-flex align-items-center mb-3 hover:translate-x-2 transition-transform duration-300">
+                    <i class="bi bi-geo-alt-fill text-danger fs-4 me-3"></i>
+                    <p class="mb-0">Jl. Nama Jalan No.123, Cileungsi, Bogor</p>
+                  </li>
+                  
+                  <li class="d-flex align-items-center mb-3 hover:translate-x-2 transition-transform duration-300">
+                    <i class="bi bi-telephone-fill text-danger fs-4 me-3"></i>
+                    <a href="tel:+6212345678900" class="text-decoration-none text-dark hover:text-danger transition-colors duration-300">
+                      +62 123-4567-8900
+                    </a>
+                  </li>
+                  
+                  <li class="d-flex align-items-center mb-3 hover:translate-x-2 transition-transform duration-300">
+                    <i class="bi bi-whatsapp text-danger fs-4 me-3"></i>
+                    <a href="https://wa.me/6212345678900" class="text-decoration-none text-dark hover:text-danger transition-colors duration-300">
+                      +62 123-4567-8900 (WhatsApp)
+                    </a>
+                  </li>
+                </ul>
               </div>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="card h-100 shadow">
-              <div class="card-body p-0">
-                <div class="map-container">
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=..."
-                    width="100%"
-                    height="400"
-                    style="border: 0"
-                    allowfullscreen=""
-                    loading="lazy"
-                  >
-                  </iframe>
+              
+              <!-- Social Media Links -->
+              <div class="border-top pt-4">
+                <h5 class="mb-3">Temukan Kami</h5>
+                <div class="d-flex gap-4">
+                  <a href="https://www.instagram.com/ismacatering" target="_blank" 
+                     class="text-decoration-none d-flex align-items-center text-dark hover:text-danger transition-colors duration-300">
+                    <i class="bi bi-instagram fs-4 me-2"></i>
+                    <span>Instagram</span>
+                  </a>
+                  
+                  <a href="https://www.facebook.com/ismacatering" target="_blank"
+                     class="text-decoration-none d-flex align-items-center text-dark hover:text-danger transition-colors duration-300">
+                    <i class="bi bi-facebook fs-4 me-2"></i>
+                    <span>Facebook</span>
+                  </a>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+      
+      <!-- Map Card -->
+      <div class="col-lg-6">
+        <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+          <div class="map-container h-100">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.6269164006544!2d106.7810816!3d-6.2062592!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f6dcc7d2c4ad%3A0x209cb1eef39be168!2sUniversitas%20Bina%20Nusantara%20Kampus%20Anggrek!5e0!3m2!1sid!2sid!4v1720173746425!5m2!1sid!2sid"
+              width="100%"
+              height="100%"
+              style="border: 0; min-height: 400px;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
     <!-- Footer -->
     <footer class="bg-dark text-white py-4">

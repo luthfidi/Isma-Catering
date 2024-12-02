@@ -250,7 +250,7 @@ section h2::after {
 }
 
 .menu-list li {
-  padding: 8px 0;
+  padding: 1px 0;
   display: flex;
   align-items: center;
 }
@@ -338,14 +338,14 @@ section h2::after {
   display: none;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
-  transition: all 0.3s ease;
+  text-decoration: none;
   z-index: 1000;
 }
 
+
 .scroll-top:hover {
+  color: white;
   background-color: var(--primary-dark);
-  transform: translateY(-3px);
 }
 
 .scroll-top.show {
