@@ -162,11 +162,6 @@ h6 {
   height: 200px;
 }
 
-/* Dekorasi Images */
-.dekorasi-img-container {
-  height: 350px;
-}
-
 /* Universal Image Style */
 .img-container img {
   width: 100%;
@@ -472,10 +467,6 @@ footer {
     height: 180px;
   }
 
-  .dekorasi-img-container {
-    height: 250px;
-  }
-
   .carousel-caption h2 {
     font-size: 1.8rem;
   }
@@ -494,9 +485,6 @@ footer {
   .catering-img-container,
   .nasi-kotak-img-container,
   .menu-img-container,
-  .dekorasi-img-container {
-    height: 200px;
-  }
 
   .carousel-caption h2 {
     font-size: 1.5rem;
