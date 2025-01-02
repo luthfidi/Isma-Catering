@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Simple scroll handler
     window.addEventListener('scroll', function() {
         // Add/remove scrolled class for navbar
-        if (window.pageYOffset > 50) {
+        if (window.scrollY  > 50) {
             navbar.classList.add('scrolled');
         } else {
             navbar.classList.remove('scrolled');
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Show/hide scroll to top button
         const scrollTopBtn = document.querySelector('.scroll-top');
-        if (window.pageYOffset > 300) {
+        if (window.scrollY  > 300) {
             scrollTopBtn.classList.add('show');
         } else {
             scrollTopBtn.classList.remove('show');
